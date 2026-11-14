@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Day 6: Data Ingestion Engineering
 
-> **Học viên:** Nguyễn Tuấn Dũng | **MSSV:** 2A202603859  
+> **Học viên:** Nguyễn Tuấn Dũng | **MSSV:** 2A202603859 | **Lớp:** L3B  
 > **Dự án:** Xây dựng Pipeline Ingestion, Chunking, Vector Indexing và Đánh giá Benchmark cho Báo cáo Thường niên Ngân hàng Thế giới (World Bank Annual Reports)  
 > **Ngày hoàn thành:** 14/11/2026  
 
