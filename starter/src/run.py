@@ -139,12 +139,13 @@ def main() -> None:
 
     # Update artifacts/experiment_log.csv
     exp_log_path = root_dir / "artifacts" / "experiment_log.csv"
+    vec_desc = f"{embedder.model_name} ({embedder.dimensions}d)"
     with open(exp_log_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["strategy","chunking","chunk_size","overlap","metadata","filter","vectorizer","hypothesis","dev_hit1","dev_hit3","test_hit1","test_hit3","notes"])
-        writer.writerow(["A","fixed_size","500","50","doc_id,source,page,year","none","gemini-embedding-001 (768d)","Fixed window cuts sentences, causing context truncation.",summary_a['dev']['hit1_ratio'],summary_a['dev']['hit3_ratio'],summary_a['test']['hit1_ratio'],summary_a['test']['hit3_ratio'],f"Total chunks: {len(chunks_a)}, Ingest: {dur_a}s"])
-        writer.writerow(["B","by_paragraph","600","0","doc_id,source,page,year","none","gemini-embedding-001 (768d)","Paragraph chunking preserves semantic units, improving coherence & Hit@3.",summary_b['dev']['hit1_ratio'],summary_b['dev']['hit3_ratio'],summary_b['test']['hit1_ratio'],summary_b['test']['hit3_ratio'],f"Total chunks: {len(chunks_b)}, Ingest: {dur_b}s"])
-        writer.writerow(["C","by_paragraph","600","0","doc_id,source,page,year","metadata_filter","gemini-embedding-001 (768d)","Metadata filter eliminates out-of-scope candidate chunks for filtered queries.",summary_c['dev']['hit1_ratio'],summary_c['dev']['hit3_ratio'],summary_c['test']['hit1_ratio'],summary_c['test']['hit3_ratio'],f"Highest accuracy on filter queries, Ingest: {dur_b}s"])
+        writer.writerow(["A","fixed_size","500","50","doc_id,source,page,year","none",vec_desc,"Fixed window cuts sentences, causing context truncation.",summary_a['dev']['hit1_ratio'],summary_a['dev']['hit3_ratio'],summary_a['test']['hit1_ratio'],summary_a['test']['hit3_ratio'],f"Total chunks: {len(chunks_a)}, Ingest: {dur_a}s"])
+        writer.writerow(["B","by_paragraph","600","0","doc_id,source,page,year","none",vec_desc,"Paragraph chunking preserves semantic units, improving coherence & Hit@3.",summary_b['dev']['hit1_ratio'],summary_b['dev']['hit3_ratio'],summary_b['test']['hit1_ratio'],summary_b['test']['hit3_ratio'],f"Total chunks: {len(chunks_b)}, Ingest: {dur_b}s"])
+        writer.writerow(["C","by_paragraph","600","0","doc_id,source,page,year","metadata_filter",vec_desc,"Metadata filter eliminates out-of-scope candidate chunks for filtered queries.",summary_c['dev']['hit1_ratio'],summary_c['dev']['hit3_ratio'],summary_c['test']['hit1_ratio'],summary_c['test']['hit3_ratio'],f"Highest accuracy on filter queries, Ingest: {dur_b}s"])
 
     # Save summary json
     summary_all = {

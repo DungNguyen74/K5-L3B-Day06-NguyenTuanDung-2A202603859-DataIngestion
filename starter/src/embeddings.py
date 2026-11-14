@@ -104,10 +104,11 @@ class LocalEmbedder:
         if not texts:
             return []
         embeddings = self._ef(texts)
-        return [list(e) for e in embeddings]
+        # Ensure pure python float types for ChromaDB compatibility
+        return [[float(x) for x in e] for e in embeddings]
 
     def embed_query(self, question: str) -> list[float]:
-        return list(self._ef([question])[0])
+        return [float(x) for x in self._ef([question])[0]]
 
 
 def get_embedder() -> Embedder:

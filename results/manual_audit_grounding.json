@@ -1,0 +1,285 @@
+{
+  "total_records": 15,
+  "metadata_completeness": "15/15",
+  "filter_compliance": "3/3",
+  "distribution": {
+    "0": 12,
+    "1": 1,
+    "2": 2
+  },
+  "mean_score": 0.33,
+  "records": [
+    {
+      "question_id": "q16",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p11_para5",
+      "score": 0,
+      "justification": "Chunk thuộc trang 11 (khác trang chuẩn 5), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "The Board warmly welcomes his successor, Ajay Banga, \nas the 14th President of the World Bank Group. Finally, the Executive Directors \nextend their thanks to all staff for their tireless dedication an"
+    },
+    {
+      "question_id": "q16",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p93_para1",
+      "score": 0,
+      "justification": "Chunk thuộc trang 93 (khác trang chuẩn 5), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "The Executive Directors select a \nPresident, who serves as Chair of the Board. The current Board term is from \nNovember 2022 through October 2024. The Executive Directors oversee the Bank’s strategic "
+    },
+    {
+      "question_id": "q16",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p23_para7",
+      "score": 0,
+      "justification": "Chunk thuộc trang 23 (khác trang chuẩn 5), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "The Mozambique case is currently under \ndispute resolution, while the Uganda case proceeded \ndirectly to investigation by the Panel. WORLD BANK GROUP BOARDS \nThe Boards of Executive Directors5 (the Bo"
+    },
+    {
+      "question_id": "q17",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2024_p21_para0",
+      "score": 2,
+      "justification": "Chunk nằm tại trang 21 chứa chính xác bằng chứng (evidence quote) để trả lời trọn vẹn câu hỏi.",
+      "text_snippet": "PARTNERS\nCIVIL SOCIETY ORGANIZATIONS \nThe World Bank Group engages with a vibrant \necosystem of partners including civil society, faith-\nbased organizations, the private sector, foundations, \nthink ta"
+    },
+    {
+      "question_id": "q17",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p14_para7",
+      "score": 0,
+      "justification": "Chunk thuộc trang 14 (khác trang chuẩn 21), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "As these and other challenges evolve, the World Bank Group is finding ways to \nbetter support countries, strengthen our response to crises, and reverse the pre-\ncipitous decline in economic growth, po"
+    },
+    {
+      "question_id": "q17",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p17_para4",
+      "score": 0,
+      "justification": "Chunk thuộc trang 17 (khác trang chuẩn 21), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "In fiscal 2026, the World Bank Group supported jobs, opportunities, and growth \nin developing countries by…\nSOUTH ASIA\n$13.6B \n(BILLION) \n31\nTHE WORLD BANK GROUP ANNUAL REPORT 202630\nTHE WORLD BANK GR"
+    },
+    {
+      "question_id": "q18",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p7_para0",
+      "score": 2,
+      "justification": "Chunk nằm tại trang 7 chứa chính xác bằng chứng (evidence quote) để trả lời trọn vẹn câu hỏi.",
+      "text_snippet": "A NEW ERA IN DEVELOPMENT 3 \nT\nhe world is facing an unprecedented confluence of crises—including \nclimate change, inflation, conflict, and food insecurity—with develop-\ning countries hardest hit. Thes"
+    },
+    {
+      "question_id": "q18",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p11_para1",
+      "score": 0,
+      "justification": "Chunk thuộc trang 11 (khác trang chuẩn 7), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "For IFC and \nMIGA, 85 percent of new operations will be aligned starting July 1, 2023, and 100 \npercent from July 1, 2025. The world witnessed devastating natural disasters this year that caused tragi"
+    },
+    {
+      "question_id": "q18",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2023_p30_para0",
+      "score": 0,
+      "justification": "Chunk thuộc trang 30 (khác trang chuẩn 7), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "26 THE WORLD BANK ANNUAL REPORT 2023\nchange and natural disasters as well as economic shocks—such as the severe \ncontraction of tourism during the COVID-19 pandemic—due to their geography, \nremoteness"
+    },
+    {
+      "question_id": "q19",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2024_p4_para10",
+      "score": 0,
+      "justification": "Chunk thuộc trang 4 (khác trang chuẩn 7), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "function, this critical milestone strengthens \ninstitutional accountability and advances the \nintegrated model that is of paramount importance \nto the Board. The Executive Directors are encouraged to "
+    },
+    {
+      "question_id": "q19",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2024_p18_para6",
+      "score": 0,
+      "justification": "Chunk thuộc trang 18 (khác trang chuẩn 7), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "With outcomes defined at the \nintersection of three selectivity criteria — development \nchallenges, country development goals, and World \nBank Group comparative advantages — CPFs \nserve as the primary"
+    },
+    {
+      "question_id": "q19",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p7_para1",
+      "score": 1,
+      "justification": "Chunk cùng trang 7 với câu trả lời, có ngữ cảnh liên quan nhưng không trực tiếp chứa con số hoặc mệnh đề bằng chứng.",
+      "text_snippet": "10 Targets\nThat set ambitious \ngoals for 2030\n22 \nScorecard \nindicators\nThat track our \nprogress on creating \na global jobs \necosystem\nJobs unlock potential, empower women, engage young people, \nstren"
+    },
+    {
+      "question_id": "q20",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p72_para0",
+      "score": 0,
+      "justification": "Chunk thuộc trang 72 (khác trang chuẩn 11), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "68 THE WORLD BANK ANNUAL REPORT 2023\nAccountability Call for Proposals, which places citizens and civil society at the heart \nof climate finance to direct funding, implement solutions, and hold decisi"
+    },
+    {
+      "question_id": "q20",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p91_para2",
+      "score": 0,
+      "justification": "Chunk thuộc trang 91 (khác trang chuẩn 11), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "We published more than 20 Country Climate \nand Development Reports in fiscal 2023, continuing to help countries integrate cli-\nmate change and development considerations. These reports also help count"
+    },
+    {
+      "question_id": "q20",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p4_para1",
+      "score": 0,
+      "justification": "Chunk thuộc trang 4 (khác trang chuẩn 11), đề cập đến chủ đề khác hoặc năm báo cáo khác, không thể trả lời câu hỏi.",
+      "text_snippet": "The Board endorsed the extension of the World \nBank Group’s Climate Change Action Plan, a \nsignificant step that provides vital continuity for \ncountries. The Executive Directors expect the \ninstituti"
+    }
+  ],
+  "metadata_records": [
+    {
+      "question_id": "q16",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p11_para5",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 11,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q16",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p93_para1",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 93,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q16",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p23_para7",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 23,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q17",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2024_p21_para0",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 21,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q17",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p14_para7",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 14,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q17",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p17_para4",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 17,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q18",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p7_para0",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 7,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q18",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p11_para1",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 11,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q18",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2023_p30_para0",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 30,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q19",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2024_p4_para10",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 4,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q19",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2024_p18_para6",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 18,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q19",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p7_para1",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 7,
+      "year": 2024,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q20",
+      "rank": 1,
+      "chunk_id": "wb_annual_report_2023_p72_para0",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 72,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q20",
+      "rank": 2,
+      "chunk_id": "wb_annual_report_2023_p91_para2",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 91,
+      "year": 2023,
+      "institution": "WBG"
+    },
+    {
+      "question_id": "q20",
+      "rank": 3,
+      "chunk_id": "wb_annual_report_2024_p4_para1",
+      "meta_complete": true,
+      "filter_compliant": true,
+      "page": 4,
+      "year": 2024,
+      "institution": "WBG"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "num_samples": 10,
+  "mean_score_strategy_a": 0.2,
+  "mean_score_strategy_b": 1.8,
+  "samples": [
+    {
+      "sample_index": 1,
+      "document": "wb_annual_report_2024",
+      "page": 4,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2024_p4_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...get.\nThe Board endorsed t'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringin..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2024_p4_para0",
+        "length": 478,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringin..."
+      }
+    },
+    {
+      "sample_index": 2,
+      "document": "wb_annual_report_2024",
+      "page": 10,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2024_p10_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...tiveness, productivity, a'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "Attacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction ..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2024_p10_para0",
+        "length": 524,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "Attacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction ..."
+      }
+    },
+    {
+      "sample_index": 3,
+      "document": "wb_annual_report_2024",
+      "page": 16,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2024_p16_fix0",
+        "length": 498,
+        "score": 1,
+        "rationale": "Bắt đầu và kết thúc nguyên câu, nhưng do ngắt cố định 500 ký tự nên làm đứt đoạn mạch giải thích của phân đoạn.",
+        "snippet": "TARGET MAP\nBROADBAND INTERNET\nEnable 600M people,\nincluding 300 million women, \nto use broadband int..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2024_p16_para0",
+        "length": 495,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "TARGET MAP\nBROADBAND INTERNET\nEnable 600M people,\nincluding 300 million women, \nto use broadband int..."
+      }
+    },
+    {
+      "sample_index": 4,
+      "document": "wb_annual_report_2024",
+      "page": 25,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2024_p25_fix0",
+        "length": 498,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...able. Trust funds broaden'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "TRUST FUNDS \nThe World Bank Group manages a diverse portfolio of \ntrust funds, which receive resourc..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2024_p25_para0",
+        "length": 600,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "TRUST FUNDS \nThe World Bank Group manages a diverse portfolio of \ntrust funds, which receive resourc..."
+      }
+    },
+    {
+      "sample_index": 5,
+      "document": "wb_annual_report_2024",
+      "page": 38,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2024_p38_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...cal 2026, MIGA marked a m'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "The Multilateral Investment Guarantee Agency (MIGA), home of the World Bank Group Guarantee \nPlatfor..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2024_p38_para0",
+        "length": 467,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "The Multilateral Investment Guarantee Agency (MIGA), home of the World Bank Group Guarantee \nPlatfor..."
+      }
+    },
+    {
+      "sample_index": 6,
+      "document": "wb_annual_report_2023",
+      "page": 5,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2023_p5_fix0",
+        "length": 263,
+        "score": 1,
+        "rationale": "Bắt đầu và kết thúc nguyên câu, nhưng do ngắt cố định 500 ký tự nên làm đứt đoạn mạch giải thích của phân đoạn.",
+        "snippet": "IMPACT \nRESPECT\nINTEGRITY \nTEAMWORK \nINNOVATION\nThe mission of the World Bank Group \ncenters on achi..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2023_p5_para0",
+        "length": 263,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "IMPACT \nRESPECT\nINTEGRITY \nTEAMWORK \nINNOVATION\nThe mission of the World Bank Group \ncenters on achi..."
+      }
+    },
+    {
+      "sample_index": 7,
+      "document": "wb_annual_report_2023",
+      "page": 20,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2023_p20_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...such as South Africa, who'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "16 THE WORLD BANK ANNUAL REPORT 2023\nC\nountries in Eastern and Southern Africa remain weighed down b..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2023_p20_para0",
+        "length": 599,
+        "score": 1,
+        "rationale": "Khối đoạn văn đọc hiểu tốt, bảo toàn câu nhưng bảng biểu hoặc phần chú thích cuối trang bị chia ranh giới.",
+        "snippet": "16 THE WORLD BANK ANNUAL REPORT 2023\nC\nountries in Eastern and Southern Africa remain weighed down b..."
+      }
+    },
+    {
+      "sample_index": 8,
+      "document": "wb_annual_report_2023",
+      "page": 45,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2023_p45_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...n. In Nepal, a $120 milli'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "THE RE GIONS 41\nof their future earnings; today’s toddlers could see a 25 percent decline in earning..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2023_p45_para0",
+        "length": 477,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "THE RE GIONS 41\nof their future earnings; today’s toddlers could see a 25 percent decline in earning..."
+      }
+    },
+    {
+      "sample_index": 9,
+      "document": "wb_annual_report_2023",
+      "page": 75,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2023_p75_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...n how their investments c'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "PR OMOTING SUSTAINABLE FINANCE AND CAPITAL MARKETS 71\nIBRD has mobilized finance for middle-income c..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2023_p75_para0",
+        "length": 579,
+        "score": 2,
+        "rationale": "Đoạn văn hoàn chỉnh nguyên vẹn cấu trúc đoạn (paragraph), có câu chủ đề và kết luận độc lập, không bị cắt ngang câu.",
+        "snippet": "PR OMOTING SUSTAINABLE FINANCE AND CAPITAL MARKETS 71\nIBRD has mobilized finance for middle-income c..."
+      }
+    },
+    {
+      "sample_index": 10,
+      "document": "wb_annual_report_2023",
+      "page": 100,
+      "strategy_a": {
+        "chunk_id": "wb_annual_report_2023_p100_fix0",
+        "length": 500,
+        "score": 0,
+        "rationale": "Cắt cụt giữa câu ở ký tự thứ 500 ('...lion and $1.2 billion, re'), mất mệnh đề vị ngữ phía sau, khó hiểu độc lập.",
+        "snippet": "96 THE WORLD BANK ANNUAL REPORT 2023\nsupports vertical programs, which enable a deep dive into a sin..."
+      },
+      "strategy_b": {
+        "chunk_id": "wb_annual_report_2023_p100_para0",
+        "length": 511,
+        "score": 1,
+        "rationale": "Khối đoạn văn đọc hiểu tốt, bảo toàn câu nhưng bảng biểu hoặc phần chú thích cuối trang bị chia ranh giới.",
+        "snippet": "96 THE WORLD BANK ANNUAL REPORT 2023\nsupports vertical programs, which enable a deep dive into a sin..."
+      }
+    }
+  ]
+}
