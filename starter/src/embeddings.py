@@ -22,63 +22,45 @@ class Embedder(Protocol):
 
 
 class GeminiEmbedder:
-    """Gemini API Embedder (text-embedding-004, 768 dimensions)."""
+    """Gemini API Embedder (gemini-embedding-001, 768 dimensions)."""
 
-    def __init__(self, api_key: str | None = None, model_name: str = "text-embedding-004") -> None:
+    def __init__(self, api_key: str | None = None, model_name: str = "gemini-embedding-001", dimensions: int = 768) -> None:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is missing. Please set it in starter/.env or pass it.")
         
         self.model_name = model_name
-        self.dimensions = 768
+        self.dimensions = dimensions
 
-        try:
-            from google import genai
-            self.client = genai.Client(api_key=self.api_key)
-            self._use_new_sdk = True
-        except ImportError:
-            import google.generativeai as genai_legacy
-            genai_legacy.configure(api_key=self.api_key)
-            self.client = genai_legacy
-            self._use_new_sdk = False
+        from google import genai
+        self.client = genai.Client(api_key=self.api_key)
 
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
         if not texts:
             return []
         
         embeddings: list[list[float]] = []
-        batch_size = 20  # Safe batch size for Gemini API rate limits
+        batch_size = 20  # Safe batch size for rate limits
         for i in range(0, len(texts), batch_size):
             batch = texts[i:i + batch_size]
-            if self._use_new_sdk:
-                response = self.client.models.embed_content(
-                    model=self.model_name,
-                    contents=batch
-                )
-                for emb in response.embeddings:
-                    embeddings.append(list(emb.values))
-            else:
-                for text in batch:
-                    res = self.client.embed_content(
-                        model=f"models/{self.model_name}" if not self.model_name.startswith("models/") else self.model_name,
-                        content=text
-                    )
-                    embeddings.append(list(res["embedding"]))
+            config = {"output_dimensionality": self.dimensions} if self.dimensions else None
+            response = self.client.models.embed_content(
+                model=self.model_name,
+                contents=batch,
+                config=config
+            )
+            for emb in response.embeddings:
+                embeddings.append(list(emb.values))
         return embeddings
 
     def embed_query(self, question: str) -> list[float]:
-        if self._use_new_sdk:
-            response = self.client.models.embed_content(
-                model=self.model_name,
-                contents=question
-            )
-            return list(response.embeddings[0].values)
-        else:
-            res = self.client.embed_content(
-                model=f"models/{self.model_name}" if not self.model_name.startswith("models/") else self.model_name,
-                content=question
-            )
-            return list(res["embedding"])
+        config = {"output_dimensionality": self.dimensions} if self.dimensions else None
+        response = self.client.models.embed_content(
+            model=self.model_name,
+            contents=question,
+            config=config
+        )
+        return list(response.embeddings[0].values)
 
 
 class LocalEmbedder:
@@ -106,8 +88,9 @@ def get_embedder() -> Embedder:
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
 
     if provider == "gemini" and gemini_key:
-        model = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
-        return GeminiEmbedder(api_key=gemini_key, model_name=model)
+        model = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
+        dims = int(os.getenv("EMBEDDING_DIMENSIONS", "768"))
+        return GeminiEmbedder(api_key=gemini_key, model_name=model, dimensions=dims)
     elif provider == "gemini" and not gemini_key:
         raise ValueError("GEMINI_API_KEY is not set in starter/.env. Please provide your Gemini API key.")
     else:

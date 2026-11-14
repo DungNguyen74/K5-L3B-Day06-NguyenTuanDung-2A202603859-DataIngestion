@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,500,50,"doc_id,source,page,year",none,gemini-embedding-001 (768d),"Fixed window arbitrarily cuts sentences, leading to boundary truncation and lower coherence.",,,,,Controlled comparison baseline
+B,by_paragraph,600,0,"doc_id,source,page,year",none,gemini-embedding-001 (768d),"Paragraph-aware chunking preserves semantic integrity, improving coherence and Hit@3.",,,,,Chunking change vs A
+C,by_paragraph,600,0,"doc_id,source,page,year",metadata_filter,gemini-embedding-001 (768d),"Metadata filtering eliminates cross-year distractor chunks, improving accuracy on filtered questions.",,,,,Filter-only change vs B

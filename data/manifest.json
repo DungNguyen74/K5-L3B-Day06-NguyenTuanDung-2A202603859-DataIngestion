@@ -1,0 +1,66 @@
+{
+  "corpus_title": "World Bank Group Annual Reports (2023 & 2024)",
+  "topic": "Global Economic Development, Multilateral Finance, Poverty Alleviation, Climate Action",
+  "license_or_permission": "Creative Commons Attribution 3.0 IGO (CC BY 3.0 IGO)",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/",
+  "accessed_at": "2026-11-14",
+  "manifest_version": "1.0",
+  "audit_notes": {
+    "scanned_files_detected": [
+      {
+        "file": "adb-annual-report-2025.pdf",
+        "physical_pages": 74,
+        "text_pages": 0,
+        "action": "Detected 100% raster image scan (/Image1). Moved to data/scanned_archive/ to avoid zero-text chunking."
+      },
+      {
+        "file": "THE-WORLD-BANK-GROUP-ANNUAL-REPORT-2026.pdf",
+        "physical_pages": 39,
+        "text_pages": 0,
+        "action": "Detected 100% raster image scan (/Image1). Moved to data/scanned_archive/ to avoid zero-text chunking."
+      }
+    ],
+    "digital_corpus_replacement": "Official digital publications with searchable text layers directly retrieved from World Bank Open Knowledge Repository (OKR)."
+  },
+  "documents": [
+    {
+      "source_id": "wb_annual_report_2024",
+      "title": "The World Bank Group Annual Report 2024: Ending Poverty on a Livable Planet",
+      "source_path_or_url": "https://openknowledge.worldbank.org/handle/10986/42057",
+      "local_path": "data/world_bank_annual_report_2024.pdf",
+      "year": 2024,
+      "total_physical_pages": 46,
+      "content_pages_count": 42,
+      "content_page_numbers": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+      "excluded_pages": {
+        "cover": [1],
+        "table_of_contents": [2],
+        "blank_or_back_cover": [45, 46]
+      },
+      "counting_rule": "Pages 3-44 contain substantive operational results, regional updates, financial commitments, and strategic reforms."
+    },
+    {
+      "source_id": "wb_annual_report_2023",
+      "title": "World Bank Annual Report 2023: A New Era in Development",
+      "source_path_or_url": "https://openknowledge.worldbank.org/handle/10986/40219",
+      "local_path": "data/world_bank_annual_report_2023.pdf",
+      "year": 2023,
+      "total_physical_pages": 114,
+      "content_pages_count": 92,
+      "content_page_numbers": [5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96],
+      "excluded_pages": {
+        "cover_and_intro": [1, 2, 3, 4],
+        "blank_dividers": [6, 8],
+        "appendix_tables": [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+      },
+      "counting_rule": "Pages 5-96 contain the President message, executive summary, regional operations, thematic reviews, and core operational stats."
+    }
+  ],
+  "total_valid_content_pages": 134,
+  "minimum_content_pages_required": 30,
+  "filter_metadata_fields": {
+    "year": "Publication reporting year (2023 or 2024)",
+    "institution": "Specific World Bank Group arm: IBRD, IDA, IFC, MIGA, WBG",
+    "topic": "Operational theme: climate, agriculture, health, energy, digital, finance"
+  }
+}

@@ -11,7 +11,15 @@ import shutil
 from pathlib import Path
 from dotenv import load_dotenv
 
-env_path = Path(__file__).resolve().parents[1] / '.env'
+# Ensure root and starter are in sys.path
+root_dir = Path(__file__).resolve().parents[2]
+starter_dir = Path(__file__).resolve().parents[1]
+if str(root_dir) not in sys.path:
+    sys.path.insert(0, str(root_dir))
+if str(starter_dir) not in sys.path:
+    sys.path.insert(0, str(starter_dir))
+
+env_path = starter_dir / '.env'
 load_dotenv(env_path)
 
 print("=== DAY 06 SETUP VERIFICATION ===")
