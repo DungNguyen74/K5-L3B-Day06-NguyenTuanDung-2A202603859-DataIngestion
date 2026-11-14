@@ -1,0 +1,41 @@
+{
+  "stats_a": {
+    "strategy": "Strategy A (Fixed-size 500/50)",
+    "total_chunks": 1202,
+    "total_chars": 564535,
+    "avg_length": 469.7,
+    "median_length": 500.0,
+    "min_length": 35,
+    "max_length": 500,
+    "stdev_length": 92.7
+  },
+  "stats_b": {
+    "strategy": "Strategy B/C (By-paragraph 600)",
+    "total_chunks": 1047,
+    "total_chars": 511161,
+    "avg_length": 488.2,
+    "median_length": 501,
+    "min_length": 20,
+    "max_length": 1702,
+    "stdev_length": 169.6
+  },
+  "audit_24": {
+    "document_id": "wb_annual_report_2024",
+    "source": "data/world_bank_annual_report_2024.pdf",
+    "total_physical_pages": 46,
+    "valid_extracted_pages": 46,
+    "empty_or_skipped_pages": []
+  },
+  "audit_23": {
+    "document_id": "wb_annual_report_2023",
+    "source": "data/world_bank_annual_report_2023.pdf",
+    "total_physical_pages": 114,
+    "valid_extracted_pages": 110,
+    "empty_or_skipped_pages": [
+      2,
+      48,
+      74,
+      112
+    ]
+  }
+}

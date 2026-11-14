@@ -1,7 +1,9 @@
 """Embedding provider adapters (Gemini API & Local ONNX).
 Complies with Day 06 Rubric: uses a real embedding model, no mock vectors.
+Includes production-grade batching and rate-limit backoff handling.
 """
 import os
+import time
 from typing import Protocol, List
 from dotenv import load_dotenv
 
@@ -40,27 +42,53 @@ class GeminiEmbedder:
             return []
         
         embeddings: list[list[float]] = []
-        batch_size = 20  # Safe batch size for rate limits
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            config = {"output_dimensionality": self.dimensions} if self.dimensions else None
-            response = self.client.models.embed_content(
-                model=self.model_name,
-                contents=batch,
-                config=config
-            )
-            for emb in response.embeddings:
-                embeddings.append(list(emb.values))
+        batch_size = 80  # Max batch size supported is 100, 80 minimizes requests drastically
+        total_batches = (len(texts) + batch_size - 1) // batch_size
+        
+        for b_idx in range(total_batches):
+            batch = texts[b_idx * batch_size:(b_idx + 1) * batch_size]
+            
+            # Retry loop for rate limits (429)
+            for attempt in range(5):
+                try:
+                    config = {"output_dimensionality": self.dimensions} if self.dimensions else None
+                    response = self.client.models.embed_content(
+                        model=self.model_name,
+                        contents=batch,
+                        config=config
+                    )
+                    for emb in response.embeddings:
+                        embeddings.append(list(emb.values))
+                    
+                    # Polite sleep between batches to stay comfortably below 100 RPM
+                    time.sleep(1.2)
+                    break
+                except Exception as e:
+                    err_msg = str(e)
+                    if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
+                        print(f"  [Notice] Gemini Free Tier rate-limit hit. Sleeping 26s before retry (attempt {attempt + 1}/5)...")
+                        time.sleep(26)
+                    else:
+                        raise e
+                        
         return embeddings
 
     def embed_query(self, question: str) -> list[float]:
-        config = {"output_dimensionality": self.dimensions} if self.dimensions else None
-        response = self.client.models.embed_content(
-            model=self.model_name,
-            contents=question,
-            config=config
-        )
-        return list(response.embeddings[0].values)
+        for attempt in range(5):
+            try:
+                config = {"output_dimensionality": self.dimensions} if self.dimensions else None
+                response = self.client.models.embed_content(
+                    model=self.model_name,
+                    contents=question,
+                    config=config
+                )
+                return list(response.embeddings[0].values)
+            except Exception as e:
+                if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                    time.sleep(15)
+                else:
+                    raise e
+        raise RuntimeError("Failed to embed query after retries.")
 
 
 class LocalEmbedder:
